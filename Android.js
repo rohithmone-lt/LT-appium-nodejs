@@ -10,12 +10,14 @@ const username = process.env.LT_USERNAME || "username";
  */
 const accessKey = process.env.LT_ACCESS_KEY || "accessKey";
 
+const buildName = process.env.LT_BUILD_NAME;
+
 /**
  * Capabilities to be passed while running the test.
  */
 const desiredCapabilities = {
   app: "lt://", // Enter the 'app_url' here.
-  build: "NodeJS - Android",
+  build: buildName,
   name: "Sample Test NodeJS",
   deviceName: "Galaxy S20",
   isRealMobile: true,
