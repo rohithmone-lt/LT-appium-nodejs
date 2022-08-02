@@ -92,9 +92,8 @@ async function runAndroidTest() {
       });
   } catch (e) {
     driver.quit();
-    console.log("quitting 1");
   }
-  console.log("quitting 3");
+  console.log("Test completed");
 }
 
 runAndroidTest();
