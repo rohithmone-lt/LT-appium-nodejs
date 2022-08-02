@@ -87,13 +87,13 @@ async function runAndroidTest() {
       })
       .then(function (find) {
         find.click();
-        console.log("quitting 1");
+        console.log("Test completed");
         driver.quit();
       });
   } catch (e) {
     driver.quit();
   }
-  console.log("Test completed");
+  console.log("Test is running....");
 }
 
 runAndroidTest();
