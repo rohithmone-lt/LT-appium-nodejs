@@ -11,12 +11,13 @@ const username = process.env.LT_USERNAME || "username";
 const accessKey = process.env.LT_ACCESS_KEY || "accessKey";
 
 const buildName = process.env.LT_BUILD_NAME;
+const appUrl = process.env.LT_APP_URL;
 
 /**
  * Capabilities to be passed while running the test.
  */
 const desiredCapabilities = {
-  app: "lt://", // Enter the 'app_url' here.
+  app: appUrl, // Enter the 'app_url' here.
   build: buildName,
   name: "Sample Test NodeJS",
   deviceName: "Galaxy S20",
@@ -26,6 +27,9 @@ const desiredCapabilities = {
   video: true,
   visual: true,
 };
+
+console.log("buildName ", buildName);
+console.log("appurl ", appUrl);
 
 const driver = wd.promiseRemote(
   `https://${username}:${accessKey}@mobile-hub.lambdatest.com/wd/hub`
@@ -83,11 +87,14 @@ async function runAndroidTest() {
       })
       .then(function (find) {
         find.click();
+        console.log("quitting 1");
         driver.quit();
       });
   } catch (e) {
     driver.quit();
+    console.log("quitting 1");
   }
+  console.log("quitting 3");
 }
 
 runAndroidTest();
