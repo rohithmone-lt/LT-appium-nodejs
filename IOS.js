@@ -78,12 +78,14 @@ driver.init(desired_capabilities)
 })
 .then(function(find){
     find.click()
+    console.log("Test completed");
     driver.quit()
 })
 }
 catch (e) {
     driver.quit()
 }
+console.log("Test is running....");
 }
 
 iOStest();
