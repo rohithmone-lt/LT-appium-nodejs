@@ -11,7 +11,7 @@ buildName = process.env.LT_BUILD_NAME;
 appUrl = process.env.LT_APP_URL;
 
 desired_capabilities = {
-    'deviceName':'iPhone X',
+    'deviceName':'iPhone 11',
     'platformVersion':'14',
     'platformName':'iOS',
     'isRealMobile':true,
