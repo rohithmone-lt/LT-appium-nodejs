@@ -7,15 +7,18 @@ username = (process.env.LT_USERNAME == undefined) ? "username" //Enter the usern
 accesskey = (process.env.LT_ACCESS_KEY == undefined) ? "access_key" //Enter the access_key here
         : process.env.LT_ACCESS_KEY
 
+buildName = process.env.LT_BUILD_NAME;
+appUrl = process.env.LT_APP_URL;
+
 desired_capabilities = {
-    'deviceName':'iPhone 12',
+    'deviceName':'iPhone X',
     'platformVersion':'14',
     'platformName':'iOS',
     'isRealMobile':true,
-    'app':'lt://', //Enter the app_url here
+    'app':appUrl, //Enter the app_url here
     'visual':true,
     'video': true,
-    'build':'NodeJS Vanilla - iOS',
+    'build':buildName,
     'name': 'Sample Test - NodeJS'
 }
 
