@@ -12,6 +12,8 @@ const accessKey = process.env.LT_ACCESS_KEY || "accessKey";
 
 const buildName = process.env.LT_BUILD_NAME;
 const appUrl = process.env.LT_APP_URL;
+const deviceName = process.env.LT_DEVICE_NAME;
+const deviceVersion = process.env.LT_DEVICE_VERSION;
 
 /**
  * Capabilities to be passed while running the test.
@@ -20,10 +22,10 @@ const desiredCapabilities = {
   app: appUrl, // Enter the 'app_url' here.
   build: buildName,
   name: "Sample Test NodeJS",
-  deviceName: "Galaxy S20",
+  deviceName: deviceName,
   isRealMobile: true,
   platformName: "android",
-  platformVersion: "11",
+  platformVersion: deviceVersion,
   video: true,
   visual: true,
 };
