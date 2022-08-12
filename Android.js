@@ -10,7 +10,7 @@ const username = process.env.LT_USERNAME || "username";
  */
 const accessKey = process.env.LT_ACCESS_KEY || "accessKey";
 
-const buildName = process.env.LT_BUILD_NAME;
+const buildName = "Hello";
 const appUrl = process.env.LT_APP_URL;
 
 /**
