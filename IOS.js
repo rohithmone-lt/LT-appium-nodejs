@@ -9,10 +9,12 @@ accesskey = (process.env.LT_ACCESS_KEY == undefined) ? "access_key" //Enter the 
 
 buildName = process.env.LT_BUILD_NAME;
 appUrl = process.env.LT_APP_URL;
+deviceName = process.env.LT_DEVICE_NAME;
+deviceVersion = process.env.LT_DEVICE_VERSION;
 
 desired_capabilities = {
-    'deviceName':'iPhone 11',
-    'platformVersion':'14',
+    'deviceName':deviceName,
+    'platformVersion':deviceVersion,
     'platformName':'iOS',
     'isRealMobile':true,
     'app':appUrl, //Enter the app_url here
