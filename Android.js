@@ -11,7 +11,7 @@ const username = process.env.LT_USERNAME || "username";
 const accessKey = process.env.LT_ACCESS_KEY || "accessKey";
 
 const buildName = process.env.LT_BUILD_NAME;
-const appUrl = process.env.LT_APP_URL;
+const appId = process.env.LT_APP_ID;
 const deviceName = process.env.LT_DEVICE_NAME;
 const deviceVersion = process.env.LT_DEVICE_VERSION;
 
@@ -19,7 +19,7 @@ const deviceVersion = process.env.LT_DEVICE_VERSION;
  * Capabilities to be passed while running the test.
  */
 const desiredCapabilities = {
-  app: appUrl, // Enter the 'app_url' here.
+  app: appId, // Enter the 'app_url' here.
   build: buildName,
   name: "Sample Test NodeJS",
   deviceName: deviceName,
@@ -31,7 +31,7 @@ const desiredCapabilities = {
 };
 
 console.log("buildName ", buildName);
-console.log("appurl ", appUrl);
+console.log("appId ", appId);
 
 const driver = wd.promiseRemote(
   `https://${username}:${accessKey}@mobile-hub.lambdatest.com/wd/hub`
