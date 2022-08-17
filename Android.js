@@ -10,7 +10,7 @@ const username = process.env.LT_USERNAME || "username";
  */
 const accessKey = process.env.LT_ACCESS_KEY || "accessKey";
 
-const devices = process.env.LT_DEVICES;
+const lt_devices = process.env.LT_DEVICES;
 
 
 const driver = wd.promiseRemote(
@@ -78,6 +78,7 @@ const DEFAULT_TIMEOUT = 10000;
       console.log("Test is running....");
     }
 
+const devices = JSON.parse(lt_devices);
 console.log("devices : " + devices);
 
 for (let i = 0; i < devices.length; i++) {
