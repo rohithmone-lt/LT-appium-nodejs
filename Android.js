@@ -12,8 +12,6 @@ const accessKey = process.env.LT_ACCESS_KEY || "accessKey";
 
 const devices = process.env.LT_DEVICES;
 
-console.log("buildName ", buildName);
-
 
 const driver = wd.promiseRemote(
   `https://${username}:${accessKey}@mobile-hub.lambdatest.com/wd/hub`
