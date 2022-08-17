@@ -78,6 +78,8 @@ const DEFAULT_TIMEOUT = 10000;
       console.log("Test is running....");
     }
 
+console.log("devices : " + devices);
+
 for (let i = 0; i < devices.length; i++) {
   
   const buildName = process.env.LT_BUILD_NAME;
