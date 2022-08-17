@@ -89,6 +89,7 @@ for (let i = 0; i < devices.length; i++) {
   const platformName = devices[i].platformName;
   
   console.log("appId ", appId);
+  console.log("this caps : ", devices[i]);
    /**
    * Capabilities to be passed while running the test.
    */
