@@ -16,12 +16,12 @@ const lt_devices = process.env.LT_DEVICES;
    * Run an android test.
    */
     async function runAndroidTest() {
-      try {
-        const driver = wd.promiseRemote(
+      const driver = wd.promiseRemote(
           `https://${username}:${accessKey}@mobile-hub.lambdatest.com/wd/hub`
         );
 
-        const DEFAULT_TIMEOUT = 10000;
+      const DEFAULT_TIMEOUT = 10000;
+      try {
         driver
           .init(desiredCapabilities)
           .then(function () {
