@@ -12,18 +12,16 @@ const accessKey = process.env.LT_ACCESS_KEY || "accessKey";
 
 const lt_devices = process.env.LT_DEVICES;
 
-
-const driver = wd.promiseRemote(
-  `https://${username}:${accessKey}@mobile-hub.lambdatest.com/wd/hub`
-);
-
-const DEFAULT_TIMEOUT = 10000;
-
 /**
    * Run an android test.
    */
     async function runAndroidTest() {
       try {
+        const driver = wd.promiseRemote(
+          `https://${username}:${accessKey}@mobile-hub.lambdatest.com/wd/hub`
+        );
+
+        const DEFAULT_TIMEOUT = 10000;
         driver
           .init(desiredCapabilities)
           .then(function () {
@@ -79,7 +77,6 @@ const DEFAULT_TIMEOUT = 10000;
     }
 
 const devices = JSON.parse(lt_devices);
-console.log("devices : " + devices);
 
 for (let i = 0; i < devices.length; i++) {
   
@@ -89,7 +86,7 @@ for (let i = 0; i < devices.length; i++) {
   const deviceVersion = devices[i].deviceVersion;
   const platformName = devices[i].platformName;
   
-  console.log("appId ", appId);
+  console.log("buildName : ", buildName);
   console.log("this caps : ", devices[i]);
    /**
    * Capabilities to be passed while running the test.
@@ -106,5 +103,5 @@ for (let i = 0; i < devices.length; i++) {
     visual: true,
   };
 
-    runAndroidTest();
+  runAndroidTest();
 } 
