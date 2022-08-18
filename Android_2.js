@@ -11,7 +11,7 @@ const DEFAULT_TIMEOUT = 10000;
 /**
    * Run an android test.
    */
-    async function runAndroidTest() {
+    async function runAndroidTest(desiredCapabilities) {
       try {
         driver
           .init(desiredCapabilities)
@@ -91,5 +91,5 @@ for (let i = 0; i < devices.length; i++) {
     video: true,
     visual: true,
   };
-    runAndroidTest();
+    runAndroidTest(desiredCapabilities);
 }
