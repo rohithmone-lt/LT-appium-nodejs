@@ -30,7 +30,9 @@ console.log("appurl ", appId);
 driver = wd.promiseRemote(`https://${username}:${accesskey}@mobile-hub.lambdatest.com/wd/hub`)
 
 async function iOStest(){
+
 try {
+
 driver.init(desired_capabilities)
 .then(function(){
     return driver.waitForElementById('color',10000)
@@ -81,14 +83,12 @@ driver.init(desired_capabilities)
 })
 .then(function(find){
     find.click()
-    console.log("Test completed");
     driver.quit()
 })
 }
 catch (e) {
     driver.quit()
 }
-console.log("Test is running....");
 }
 
 iOStest();
