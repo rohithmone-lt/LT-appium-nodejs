@@ -29,7 +29,7 @@ console.log("appurl ", appId);
 
 driver = wd.promiseRemote(`https://${username}:${accesskey}@mobile-hub.lambdatest.com/wd/hub`)
 
-async function iOSTest() {
+async function iOStest() {
   try {
     driver
       .init(desiredCapabilities)
