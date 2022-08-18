@@ -25,7 +25,7 @@ desired_capabilities = {
 }
 
 console.log("buildName ", buildName);
-console.log("appurl ", appUrl);
+console.log("appurl ", appId);
 
 driver = wd.promiseRemote(`https://${username}:${accesskey}@mobile-hub.lambdatest.com/wd/hub`)
 
