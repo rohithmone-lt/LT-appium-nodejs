@@ -92,3 +92,4 @@ for (let i = 0; i < devices.length; i++) {
     visual: true,
   };
     runAndroidTest();
+}
