@@ -29,68 +29,60 @@ console.log("appurl ", appId);
 
 driver = wd.promiseRemote(`https://${username}:${accesskey}@mobile-hub.lambdatest.com/wd/hub`)
 
-async function iOStest(){
-
-try {
-
-driver.init(desired_capabilities)
-.then(function(){
-    return driver.waitForElementById('color',10000)
-})
-.then(function(color){
-    return color.click();
-})
-.then(function(){
-    return driver.waitForElementById('Text',10000)
-})
-.then(function(text){
-    text.click()
-    return driver.waitForElementById('toast',10000)
-})
-.then(function(toast){
-    toast.click()
-    return driver.waitForElementById('notification',10000)
-})
-.then(function(notification){
-    notification.click()
-    return driver.waitForElementById('geoLocation',10000)
-})
-.then(function(geoLocation){
-    return geoLocation.click()
-})
-.then(async function(){
-    return driver.waitForElementById('Back',10000)
-})
-.then(function(Back){
-    Back.click()
-    return driver.waitForElementById('speedTest',10000)
-})
-.then(async function(speedTest){
-    speedTest.click()
-    return driver.waitForElementById('Back',10000)
-})
-.then(function(back){
-    back.click()
-    return driver.waitForElementById('Browser',10000)
-})
-.then(function(Browser){
-    Browser.click()
-    return driver.waitForElementById('url',10000)
-})
-.then(function(url){
-    url.type("https://www.lambdatest.com")
-    return driver.waitForElementById('find',10000)
-})
-.then(function(find){
-    find.click()
-    console.log("Test completed");
-    driver.quit()
-})
-}
-catch (e) {
-    driver.quit()
-}
-console.log("Test is running....");
+async function iOSTest() {
+  try {
+    driver
+      .init(desiredCapabilities)
+      .then(function () {
+        return driver.waitForElementById("color", DEFAULT_TIMEOUT);
+      })
+      .then(function (colorButton) {
+        return colorButton.click();
+      })
+      .then(function () {
+        return driver.waitForElementById("Text", DEFAULT_TIMEOUT);
+      })
+      .then(function (text) {
+        text.click();
+        return driver.waitForElementById("toast", DEFAULT_TIMEOUT);
+      })
+      .then(function (toast) {
+        toast.click();
+        return driver.waitForElementById("notification", DEFAULT_TIMEOUT);
+      })
+      .then(function (notification) {
+        notification.click();
+        return driver.waitForElementById("geoLocation", DEFAULT_TIMEOUT);
+      })
+      .then(function (geoLocation) {
+        geoLocation.click();
+        return driver.waitForElementById("buttonPage", DEFAULT_TIMEOUT);
+      })
+      .then(function (Home) {
+        Home.click();
+        return driver.waitForElementById("speedTest", DEFAULT_TIMEOUT);
+      })
+      .then(function (speedTest) {
+        speedTest.click();
+        return driver.waitForElementById("webview", DEFAULT_TIMEOUT);
+      })
+      .then(function (Browser) {
+        Browser.click();
+        return driver.waitForElementById("url", DEFAULT_TIMEOUT);
+      })
+      .then(function (url) {
+        url.type("https://www.lambdatest.com");
+        return driver.waitForElementById("find", DEFAULT_TIMEOUT);
+      })
+      .then(function (find) {
+        find.click();
+        console.log("Test completed");
+        driver.quit();
+      });
+  } catch (e) {
+    driver.quit();
+  }
+  console.log("Test is running....");
 }
 
 iOStest();
