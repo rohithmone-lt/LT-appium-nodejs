@@ -20,6 +20,7 @@ desired_capabilities = {
     'app':appId, //Enter the app_url here
     'visual':true,
     'video': true,
+    'network':true,
     'build':buildName,
     'name': 'Sample Test - NodeJS'
 }
