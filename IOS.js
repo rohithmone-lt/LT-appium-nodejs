@@ -69,11 +69,11 @@ driver.init(desired_capabilities)
 })
 .then(function(Browser){
     Browser.click()
-    return driver.waitForElementById('url',10000)
+    return driver.waitForElementById('url')
 })
 .then(function(url){
     url.type("https://www.ifconfig.me/")
-    return driver.waitForElementById('find',10000)
+    return driver.waitForElementById('find')
 })
 .then(function(find){
     find.click()
