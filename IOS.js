@@ -22,8 +22,8 @@ desired_capabilities = {
     'video': true,
     'network':true,
     'build':buildName,
-    'name': 'Sample Test - NodeJS',
-    'tunnel':true
+    'tunnel':true,
+    'name': 'Sample Test - NodeJS'
 }
 
 console.log("buildName ", buildName);
