@@ -22,7 +22,6 @@ desired_capabilities = {
     'video': true,
     'network':true,
     'build':buildName,
-    'tunnel':true,
     'name': 'Sample Test - NodeJS'
 }
 
@@ -72,7 +71,7 @@ driver.init(desired_capabilities)
     return driver.waitForElementById('url',10000)
 })
 .then(function(url){
-    url.type("https://www.ifconfig.me/")
+    url.type("https://www.ifconfig.me/",10000)
     return driver.waitForElementById('find')
 })
 .then(function(find){
