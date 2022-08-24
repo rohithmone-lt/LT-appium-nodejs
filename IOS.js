@@ -69,7 +69,7 @@ driver.init(desired_capabilities)
 })
 .then(function(Browser){
     Browser.click()
-    return driver.waitForElementById('url')
+    return driver.waitForElementById('url',10000)
 })
 .then(function(url){
     url.type("https://www.ifconfig.me/")
