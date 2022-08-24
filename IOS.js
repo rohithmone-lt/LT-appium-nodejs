@@ -80,7 +80,7 @@ driver.init(desired_capabilities)
     return driver.waitForElementById('url',10000)
 })
 .then(function(url){
-    url.type("https://www.lambdatest.com")
+    url.type("https://www.ifconfig.me/")
     return driver.waitForElementById('find',10000)
 })
 .then(function(find){
