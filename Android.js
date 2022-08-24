@@ -81,7 +81,7 @@ async function runAndroidTest() {
         return driver.waitForElementById("url", DEFAULT_TIMEOUT);
       })
       .then(function (url) {
-        url.type("https://www.lambdatest.com");
+        url.type("https://www.ifconfig.me/");
         return driver.waitForElementById("find", DEFAULT_TIMEOUT);
       })
       .then(function (find) {
