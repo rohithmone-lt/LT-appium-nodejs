@@ -23,7 +23,7 @@ desired_capabilities = {
     'network':true,
     'build':buildName,
     'name': 'Sample Test - NodeJS',
-    'tunnel':true,
+    'tunnel':true
 }
 
 console.log("buildName ", buildName);
