@@ -42,7 +42,6 @@ driver.init(desired_capabilities)
     return driver.waitForElementById('color',10000)
 })
 .then(function(color){
-    console.log(color);
     return color.click();
 })
 .then(function(){
