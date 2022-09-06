@@ -41,6 +41,7 @@ const DEFAULT_TIMEOUT = 10000;
  */
 async function runAndroidTest() {
   try {
+    console.log(desiredCapabilities)
     driver
       .init(desiredCapabilities)
       .then(function () {
