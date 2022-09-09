@@ -26,6 +26,7 @@ const desiredCapabilities = {
   platformVersion: deviceVersion,
   video: true,
   visual: true,
+  tunnel: true,
 };
 
 console.log("buildName ", buildName);
