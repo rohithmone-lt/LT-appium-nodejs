@@ -34,7 +34,7 @@ driver = wd.promiseRemote(`https://${username}:${accesskey}@mobile-hub.lambdates
 async function iOStest(){
 
 try {
-        
+console.log(desired_capabilities);
 driver.init(desired_capabilities)
 .then(function(){
     return driver.waitForElementById('color',10000)
