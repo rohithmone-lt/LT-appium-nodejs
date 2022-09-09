@@ -67,13 +67,21 @@ driver.init(desired_capabilities)
     Back.click()
     return driver.waitForElementById('speedTest',10000)
 })
+.then(async function(speedTest){
+    speedTest.click()
+    return driver.waitForElementById('Back',10000)
+})
+.then(function(back){
+    back.click()
+    return driver.waitForElementById('Browser',10000)
+})
 .then(function(Browser){
     Browser.click()
     return driver.waitForElementById('url',10000)
 })
 .then(function(url){
-    url.type("https://www.ifconfig.me/",10000)
-    return driver.waitForElementById('find')
+    url.type("https://www.ifconfig.me/")
+    return driver.waitForElementById('find', 10000)
 })
 .then(function(find){
     find.click()
