@@ -85,8 +85,9 @@ driver.init(desired_capabilities)
 })
 .then(function(find){
     find.click()
+    console.log("Test completed 1");
     driver.quit()
-    console.log("Test completed");
+    console.log("Test completed 2");
 })
 }
 catch (e) {
