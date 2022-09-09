@@ -82,6 +82,7 @@ driver.init(desired_capabilities)
 catch (e) {
     driver.quit()
 }
+console.log("Test is running....");
 }
 
 iOStest();
