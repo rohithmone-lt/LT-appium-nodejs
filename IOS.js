@@ -34,11 +34,8 @@ async function iOStest(){
 
 try {
         
- console.log("Hello after try 1");
-
 driver.init(desired_capabilities)
 .then(function(){
-        console.log("Hello after try 2");
     return driver.waitForElementById('color',10000)
 })
 .then(function(color){
