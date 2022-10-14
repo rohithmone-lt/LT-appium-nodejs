@@ -63,14 +63,6 @@ driver.init(desired_capabilities)
 .then(async function(){
     return driver.waitForElementById('Back',10000)
 })
-.then(function(Back){
-    Back.click()
-    return driver.waitForElementById('speedTest',10000)
-})
-.then(async function(speedTest){
-    speedTest.click()
-    return driver.waitForElementById('Back',10000)
-})
 .then(function(back){
     back.click()
     return driver.waitForElementById('Browser',10000)
