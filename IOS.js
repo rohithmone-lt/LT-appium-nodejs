@@ -75,9 +75,10 @@ driver.init(desired_capabilities)
     url.type("https://www.ifconfig.me/")
     return driver.waitForElementById('find', 10000)
 })
-.then(function(find){
+.then(async function(find){
     find.click()
     driver.quit()
+    await sleep(40000)
     console.log("Test completed");
 })
 }
@@ -85,6 +86,12 @@ catch (e) {
     driver.quit()
 }
 console.log("Test is running....");
+}
+
+const sleep = async function (ms) {
+    return new Promise((resolve) => {
+      setTimeout(resolve, ms);
+    });
 }
 
 iOStest();
