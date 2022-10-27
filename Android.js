@@ -25,8 +25,7 @@ const desiredCapabilities = {
   platformName: "android",
   platformVersion: deviceVersion,
   video: true,
-  visual: true,
-  tunnel: true,
+  visual: true
 };
 
 console.log("buildName ", buildName);
@@ -91,6 +90,7 @@ async function runAndroidTest() {
         driver.quit();
       });
   } catch (e) {
+    console.log(e)
     driver.quit();
   }
   console.log("Test is running....");
