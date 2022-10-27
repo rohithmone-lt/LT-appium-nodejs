@@ -29,9 +29,6 @@ const desiredCapabilities = {
   tunnel: true
 };
 
-console.log("buildName ", buildName);
-console.log("appId ", appId);
-
 const driver = wd.promiseRemote(
   `https://${username}:${accessKey}@mobile-hub.lambdatest.com/wd/hub`
 );
